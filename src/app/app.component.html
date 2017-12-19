@@ -1,0 +1,39 @@
+﻿<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <img src="/assets/images/tcf swish.png">
+    <a class="navbar-brand" href="#">Ultimate Beneficial Owner</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" routerLink="search">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" routerLink="create">CustomerInformation</a>
+            </li>
+            <li class="nav-item" *ngIf="customerinformationservice.EnableExemptionSelection()">
+                <a class="nav-link " data-toggle="tab" routerLink="exemption">ExemptionSelection</a>
+            </li>
+            <li class="nav-item" *ngIf="!customerinformationservice.EnableExemptionSelection()">
+                <a class="nav-link disabled" data-toggle="tab" >ExemptionSelection</a>
+            </li>
+            <li class="nav-item"  *ngIf="customerexemptionservice.EnableTreeView()">
+                <a class="nav-link " data-toggle="tab" routerLink="treeview">TreeView</a>
+            </li>
+            <li class="nav-item" *ngIf="!customerexemptionservice.EnableTreeView()">
+                <a class="nav-link disabled" data-toggle="tab">TreeView</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div style="float: left;" class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<script>
+        $(".nav li").on("click", function() {
+            $(".nav li").removeClass("active");
+      $(this).addClass("active");
+    });
+</script>

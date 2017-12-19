@@ -1,0 +1,27 @@
+    <div class="container">
+        <div class='row'>
+          <div class="col-md-12">
+            <form [formGroup]="customerExemptionForm">
+              <br />
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="categoryId">Exemption Category</label>
+                <div class="col-md-8">
+                  <select formControlName="custCategory"  class="selectpicker"  id="categoryId" (change)="onCategoryChange()">
+                    <option *ngFor="let category of categories" [ngValue]="category">{{category.CategoryName}}</option>
+                  </select>
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="subCategoryId">Exemption SubCategory</label>
+                <div class="col-md-8">
+                  <select formControlName="custSubCategory" id="subCategoryId" class="selectpicker" >
+                    <option *ngFor="let subCategory of subCategories" [ngValue]="subCategory">{{subCategory.SubCategoryName}}</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          </div>
+        </div>
+      

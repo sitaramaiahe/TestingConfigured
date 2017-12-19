@@ -1,0 +1,66 @@
+﻿[
+  {
+    "EIN": "123-45-8291",
+    "EntityName": "Leaf Rake",
+    "ClassificationCode": "GDN-0011",
+    "formationZipCode": "March 19, 2016",
+    "formationCountryCode": "Leaf rake with 48-inch wooden handle.",
+    "businessZipCode": "57107",
+    "businessCountryCode": "12345",
+    "permenantZipCode": "53145",
+    "permenantCountryCode": "67890",
+    "Status": "Complete",
+    "LineOfBusiness":  "Equipment Finance"
+  },
+  {
+    "EIN": "123-45-8291",
+    "EntityName": "Leaf Rake",
+    "ClassificationCode": "GDN-0011",
+    "formationZipCode": "March 19, 2016",
+    "formationCountryCode": "Leaf rake with 48-inch wooden handle.",
+    "businessZipCode": "57107",
+    "businessCountryCode": "12345",
+    "permenantZipCode": "53145",
+    "permenantCountryCode": "67890",
+    "Status": "Inprocess",
+    "LineOfBusiness": "Inventory Finace (Non Deposit)"
+  },
+  {
+    "EIN": "123-45-8291",
+    "EntityName": "Leaf Rake",
+    "ClassificationCode": "GDN-0011",
+    "formationZipCode": "March 19, 2016",
+    "formationCountryCode": "Leaf rake with 48-inch wooden handle.",
+    "businessZipCode": "57107",
+    "businessCountryCode": "12345",
+    "permenantZipCode": "53145",
+    "permenantCountryCode": "67890",
+    "Status": "Complete",
+    "LineOfBusiness": "RetailBankingDeposit"
+  },
+  {
+    "EIN": "123-45-8291",
+    "EntityName": "Leaf Rake",
+    "ClassificationCode": "GDN-0011",
+    "formationZipCode": "March 19, 2016",
+    "formationCountryCode": "Leaf rake with 48-inch wooden handle.",
+    "businessZipCode": "57107",
+    "businessCountryCode": "12345",
+    "permenantZipCode": "53145",
+    "permenantCountryCode": "67890",
+    "Status": "Complete",
+    "LineOfBusiness": "RetailBankingDeposit"
+  },
+  {
+    "EIN": "123-45-8291",
+    "EntityName": "Leaf Rake",
+    "ClassificationCode": "GDN-0011",
+    "formationZipCode": "March 19, 2016",
+    "formationCountryCode": "Leaf rake with 48-inch wooden handle.",
+    "businessZipCode": "57107",
+    "businessCountryCode": "12345",
+    "permenantZipCode": "53145",
+    "permenantCountryCode": "67890",
+    "Status": "InProcess"
+  }
+]

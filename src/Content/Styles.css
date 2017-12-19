@@ -1,0 +1,39 @@
+﻿/*.ubo-layout-transparent {
+    background: linear-gradient( rgba(0, 0, 255, 0.45), rgba(0, 0, 255, 0.45) ), url('assets/scotch-dog1.jpg') center / cover;
+    height: 400px;
+}
+
+ /*Header Text*/ 
+/*.ubo-header {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+       
+}*/*/
+
+/* Content Wrapper */
+/*.container {
+    width: 80%;
+    margin: 0 auto;
+}*/
+html {
+    font-size: 14px;
+}
+
+/*@include media-breakpoint-up(sm) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 28px;
+    }
+}*/

@@ -1,0 +1,145 @@
+﻿<body>
+    <div class="container">
+      <form [formGroup]="createCustomerForm" (ngSubmit)="onSubmit()">
+        <br />
+        <div>
+          <span class="error" *ngIf="createCustomerForm.errors?.zipCountryValid">
+            Please select at least one Zip/Postal Code and Country Code*
+          </span>
+        </div>
+        <fieldset>     
+          <div class='row'>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="entityName">Entity Name*</label>
+                <input type="text" class="form-control" formControlName="entityName" id="entityName" placeholder="Entity Name*">
+                <div *ngIf="(createCustomerForm.get('entityName').touched ||
+                                              createCustomerForm.get('entityName').dirty) &&
+                                              createCustomerForm.get('entityName').errors" class="error">
+                  <span *ngIf="createCustomerForm.get('entityName').errors.required">
+                    Please enter Entity Name*
+                  </span>
+                  <span *ngIf="createCustomerForm.get('entityName').errors.maxlength ">
+                    Entity Name should not be greater than 40 characters.
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ein">EIN*</label>
+                <input type="text" class="form-control" formControlName="ein" id="ein" placeholder="EIN*">
+                <div *ngIf="(createCustomerForm.get('ein').touched ||
+                                  createCustomerForm.get('ein').dirty) &&
+                                  createCustomerForm.get('ein').errors" class="error">
+                  <span *ngIf="createCustomerForm.get('ein').errors.required">
+                    Please enter EIN*.
+                  </span>
+                  <span *ngIf="createCustomerForm.get('ein').errors.maxlength ">
+                    EIN should not be greater than 20 characters.
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="NAICSCode">NAICS Code*</label>
+                <input type="text" class="form-control" formControlName="NAICSCode" id="NAICSCode" placeholder="NAICS Code*">          
+                  <div *ngIf="(createCustomerForm.get('NAICSCode').touched ||
+                                  createCustomerForm.get('NAICSCode').dirty) &&
+                                  createCustomerForm.get('NAICSCode').errors" class="error">
+                    <span *ngIf="createCustomerForm.get('NAICSCode').errors.required">
+                      Please enter NAICSCode*.
+                    </span>
+                    <span *ngIf="createCustomerForm.get('NAICSCode').errors.maxlength ">
+                      NAICS Code should not be greater than 50 characters.
+                    </span>
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="formationCountryCode">Formation Country Code</label>
+                <input type="text" class="form-control" formControlName="formationCountryCode" id="formationCountryCode" placeholder="Formation Country Code">
+                <div *ngIf="(createCustomerForm.get('formationCountryCode').touched ||
+                                              createCustomerForm.get('formationCountryCode').dirty) &&
+                                              createCustomerForm.get('formationCountryCode').errors" class="error">
+                  <span *ngIf="createCustomerForm.get('formationCountryCode').errors.maxlength ">
+                    Formation Country Code should not be greater than 5 characters.
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="formationZipCode">Formation Zip/Postal Code </label>
+                <input type="text" class="form-control" formControlName="formationZipCode" id="formationZipCode" placeholder="Formation Zip/Postal Code">
+                <div *ngIf="(createCustomerForm.get('formationZipCode').touched ||
+                                  createCustomerForm.get('formationZipCode').dirty) &&
+                                  createCustomerForm.get('formationZipCode').errors" class="error">
+                  <span *ngIf="createCustomerForm.get('formationZipCode').errors.validateZIP ">
+                    Please enter valid Formation Zip/Postal Code.
+                  </span>
+                </div>
+              </div>       
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="businessCountryCode">Business Country Code</label>
+                <input type="text" class="form-control" id="businessCountryCode" formControlName="businessCountryCode" placeholder="Business Country Code">
+                <div *ngIf="(createCustomerForm.get('businessCountryCode').touched ||
+                                              createCustomerForm.get('businessCountryCode').dirty) &&
+                                              createCustomerForm.get('businessCountryCode').errors" class="error">
+  
+                  <span *ngIf="createCustomerForm.get('businessCountryCode').errors.maxlength ">
+                    Business Country Code should not be greater than 5 characters.
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="businessZipCode">Business Zip/Postal Code </label>
+                <input type="text" class="form-control" formControlName="businessZipCode" id="businessZipCode" placeholder="Business Zip/Postal Code">
+                <div *ngIf="(createCustomerForm.get('businessZipCode').touched ||
+                                  createCustomerForm.get('businessZipCode').dirty) &&
+                                  createCustomerForm.get('businessZipCode').errors" class="error">
+                  <span *ngIf="createCustomerForm.get('businessZipCode').errors.validateZIP ">
+                    Please enter valid Business Zip/Postal Code.
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="permanentCountryCode">Permanent Country Code</label>
+                <input type="text" class="form-control" formControlName="permanentCountryCode" placeholder="Permanent Country Code">
+                <div *ngIf="(createCustomerForm.get('permanentCountryCode').touched ||
+                                              createCustomerForm.get('permanentCountryCode').dirty) &&
+                                              createCustomerForm.get('permanentCountryCode').errors" class="error">
+  
+                  <span *ngIf="createCustomerForm.get('permanentCountryCode').errors.maxlength ">
+                    Permanent Country Code  should not be greater than 5 characters.
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="permanentZipCode"> Permanent Zip/Postal Code</label>
+                <input type="text" class="form-control" formControlName="permanentZipCode" id="permanentZipCode" placeholder="Permanent Zip/Postal Code">
+                <div *ngIf="(createCustomerForm.get('permanentZipCode').touched ||
+                                  createCustomerForm.get('permanentZipCode').dirty) &&
+                                  createCustomerForm.get('permanentZipCode').errors" class="error">
+                  <span *ngIf="createCustomerForm.get('permanentZipCode').errors.validateZIP ">
+                    Please enter valid permanent Zip/Postal Code.
+                  </span>
+                </div>
+              </div>
+            </div>     
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+  <style>
+    .error {
+      color: #d93a3e;
+    }
+  
+    .message {
+      color: #d93a3e;
+    }
+  
+    #year {
+      width: 50px;
+    }
+  </style>
+  

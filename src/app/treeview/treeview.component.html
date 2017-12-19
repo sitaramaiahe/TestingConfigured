@@ -1,0 +1,57 @@
+﻿<body>
+    <div class="container">
+      <div class='row'>
+        <div class="col-md-6">
+          <form [formGroup]="treeViewForm" (ngSubmit)="onSubmit()">
+            <br />
+            <div class="form-group">
+              <label for="Name">Name</label>
+              <input type="text" class="form-control" formControlName="Name" id="Name" placeholder="Name">
+              <div *ngIf="(treeViewForm.get('Name').touched ||
+                                  treeViewForm.get('Name').dirty) &&
+                                  treeViewForm.get('Name').errors" class="error">
+                <span *ngIf="treeViewForm.get('Name').errors.required">
+                  Please enter Name.
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="ITIN">ITIN</label>
+              <input type="text" class="form-control" formControlName="ITIN" id ="ITIN" placeholder="ITIN">
+              <div *ngIf="(treeViewForm.get('ITIN').touched ||
+                                  treeViewForm.get('ITIN').dirty) &&
+                                  treeViewForm.get('ITIN').errors" class="error">
+                <span *ngIf="treeViewForm.get('ITIN').errors.required">
+                  Please enter ITIN.
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="PercentageOwner">PercentageOwner</label>
+              <input type="text" class="form-control" formControlName="PercentageOwner" id="PercentageOwner" placeholder="PercentageOwner">
+              <div *ngIf="(treeViewForm.get('PercentageOwner').touched ||
+                                  treeViewForm.get('PercentageOwner').dirty) &&
+                                  treeViewForm.get('PercentageOwner').errors" class="error">
+                <span *ngIf="treeViewForm.get('PercentageOwner').errors.required">
+                  Please enter PercentageOwner.
+                </span>
+              </div>
+            </div>
+     
+            <button type="submit" class="btn btn-primary">Add New UBO</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--<Selected-Info>Loading AppComponent content here ...</Selected-Info>-->
+  </body>
+  <style>
+    .error {
+      color: #d93a3e;
+    }
+  
+    #year {
+      width: 50px;
+    }
+  </style>
+  
